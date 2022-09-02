@@ -1,0 +1,43 @@
+<!-- <div class="menu-item-info-box">  [@menuItemAppeared]="menuItemState"
+    <span class="menu-item-info-box-icon">
+      <img [src]="menuItem?.imagePath"></span>
+
+    <div class="menu-item-info-box-content">
+      <span class="menu-item-info-box-text">{{menuItem?.name}}</span>
+      <span class="menu-item-info-box-detail">{{menuItem?.description}}</span>
+      <span class="menu-item-info-box-price">{{menuItem?.price | currency: 'BRL': true}}</span>
+      <a (click)="emitAddEvent()" class=""><i class="fa fa-plus-circle"></i> Adicionar</a>
+    </div>
+     /.info-box-content
+  </div> -->
+<section class="content">
+    <div class="col-12" style="padding: 0px; margin: 0px;">
+        <div class="align-items-stretch flex-column" style="margin-bottom: 15px">
+            <div class="card-header text-muted card text-muted border-bottom-0"
+                style="padding-left: 5px; padding-right: 20px; background-color: white;">
+                <div class="card-body pt-0" style="padding:0px;">
+                    <div class="row">
+                        <div class="col-3 text-center" style="padding-right: 0px;">
+                            <img [src]="menuItem?.imagePath" alt="food-avatar" class="img-fluid" style="width: 130px; height: 115px;">
+                        </div>
+                        <div class="col-6">
+                            <h4>
+                                <span class="place-info-box-text">{{menuItem?.name}}</span><br>
+                            </h4>
+                            <span class="place-info-box-detail">{{menuItem?.description}}</span>
+                            <div class="row" style="padding-top: 15px;">
+                                <div class="col-4">
+                                    <span class="place-info-box-price">{{menuItem?.price | currency: 'BRL':
+                                        true}}</span>
+                                </div>
+                                <div class="col-6" id="btnAddItemMenu">
+                                    <a (click)="emitAddEvent()" class=""><i class="fa fa-plus-circle"></i> Adicionar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

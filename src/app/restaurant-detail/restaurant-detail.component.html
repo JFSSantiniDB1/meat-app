@@ -1,0 +1,66 @@
+<!-- INÍCIO DO CONTEÚDO -->
+<section class="content-header">
+    <h1></h1>
+</section>
+
+<section class="content">
+
+    <div class="col-12">
+        <div class="card text-muted border-bottom-0">
+
+            <div class="card-header" style="padding-top: 10px; padding-bottom: 5px;">
+                <div class="row">
+                    <i class="fa fa-home"
+                        style="font-size:30px; padding-left: 15px; padding-right: 0px; padding-top: 3px;"></i>
+                    <div class="col-10" style="padding-left: 10px;">
+                        <h3 class="box-title">{{restaurant?.name}}</h3>
+                    </div>
+                    <span class="pull-right"
+                        style="font-size:21px; padding-left: 60px; padding-right: 0px; padding-top: 3px;"> <i
+                            class="fa fa-star"></i> {{restaurant?.rating}} </span>
+                </div>
+            </div>
+            <div class="card-body" style="padding-top: 0px; padding-bottom: 0px;">
+                <div class="box-body">
+                    <div class="row">
+                        <div class="col-3 text-center" style="padding-right: 30px; padding-top: 0px">
+                            <img [src]="restaurant?.imagePath" alt="restaurant-avatar" class="img-fluid">
+                        </div>
+                        <dl class="col-sm-9 col-xs-12" style="padding-top: 30px;">
+                            <dt>Categoria</dt>
+                            <dd>{{restaurant?.category}}</dd>
+                            <dt>Quem somos</dt>
+                            <dd>{{restaurant?.about}}</dd>
+                            <dt>Horários</dt>
+                            <dd>{{restaurant?.hours}}</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="box-footer detail-footer">
+                <div class="card-header">
+                    <ul class="nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link active" routerLinkActive="detail-active" [routerLink]="['menu']"
+                                data-toggle="tab">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLinkActive="detail-active" [routerLink]="['reviews']"
+                                data-toggle="tab">Avaliações</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <section class="content">
+            <div class="col-12" style="padding: 0px; margin: 0px;">
+                <router-outlet></router-outlet>
+            </div>
+        </section>
+    </div>
+</section>
+
+
+
+
+<!-- FIM DO CONTEÚDO -->

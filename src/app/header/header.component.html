@@ -1,0 +1,22 @@
+<!-- Início do header -->
+<header>
+    <nav class="main-header navbar navbar-expand navbar-primary navbar-dark" id="headerMeat">
+      <div class="container">
+        <a [routerLink]="['/']" class="navbar-brand">
+          <span class="brand-text" id="headerMeatText">Meat</span>
+        </a>
+  
+        <ul class="navbar-nav">
+          <li routerLinkActive="active" class="nav-item d-none d-sm-inline-block">
+            <a [routerLink]="['/restaurants']" class="nav-link" id="headerMeatText">Restaurantes</a>
+          </li>
+          <li routerLinkActive="active" class="nav-item d-none d-sm-inline-block">
+            <a [routerLink]="['/about']" class="nav-link" id="headerMeatText">Sobre</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+        </ul>
+      </div>
+    </nav>
+    </header>
+    <!-- Fim do header -->

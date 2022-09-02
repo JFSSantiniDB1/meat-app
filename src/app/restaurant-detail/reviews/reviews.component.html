@@ -1,0 +1,31 @@
+<section class="content">
+    <div class="col-12" style="padding: 0px; margin: 0px;">
+        <div class="row">
+            <div class="col-sm-6 col-xs-12" *ngFor="let review of reviews | async">
+                <div class="card text-muted border-bottom-0">
+                    <div class="box box-solid" style="padding: 10px;">
+                        <div class="row">
+                            <div class="col-12" style="padding: 10px;">
+                                <div class="box-header with-border">
+                                    <span class="review-score pull-right" style="padding-right: 10px;"><i class="fa fa-star"></i> {{review.rating}}</span>
+                                    <div class="user-block">
+                                      <img *ngIf="review.rating < 3" alt="User Image" class="img-circle" src="assets/img/reactions/pissed.png">
+                                      <img *ngIf="review.rating >= 3 && review.rating < 4" alt="User Image" class="img-circle" src="assets/img/reactions/soso.png">
+                                      <img *ngIf="review.rating >= 4" alt="User Image" class="img-circle" src="assets/img/reactions/loved.png">
+                                      <span class="username">{{review.name}}</span>
+                                      <span class="description">{{review.date | date:'dd/MM/yyyy'}}</span>
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="box-body">
+                                    <p style="margin-bottom: 5px;">{{review.comments}}</p>
+                                  </div>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+      </div>
+    </div>
+</section>

@@ -1,0 +1,32 @@
+<a [routerLink]="['/restaurants', restaurant?.id]">
+    <div class="align-items-stretch flex-column" style="margin: 8px">
+        <div class="card-header text-muted border-bottom-0 card text-muted border-bottom-0" style="padding-left: 10px; padding-right: 20px;">        
+            <div class="card-body pt-0" style="padding:0px;">
+                <div class="row">
+                    <div class="col-3 text-center" style="padding-right: 0px;">
+                        <img [src]="restaurant?.imagePath" alt="restaurant-avatar" class="img-fluid">
+                    </div>
+                    <div class="col-6">
+                        <h4>
+                            <span class="place-info-box-text">{{restaurant?.name}}</span><br>
+                        </h4>
+                        <span class="place-info-box-detail">{{restaurant?.category}}</span>
+                        <span class="place-info-box-detail">{{restaurant?.deliveryEstimate}}</span>
+                    </div>
+                    <div class="col-3">
+                        <span class="place-info-box-star"><i class="fa fa-star"></i> {{restaurant?.rating}}</span><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="place-info-box" >  [@restaurantAppeared]="restaurantState" -->
+      <!-- <span class="place-info-box-icon"><img [src]="restaurant?.imagePath" /></span>
+  
+      <div class="place-info-box-content">
+        
+        
+      </div>
+        /.info-box-content
+    </div> -->
+  </a>

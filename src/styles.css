@@ -1,1 +1,203 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    color: #555;
+}
+
+#verRestaurantes{
+  background-color: #c94714ec;
+  border-color: rgb(156, 147, 147);
+}
+
+.jumbotron {
+    background-color: #fff;
+    text-align:center;
+}
+.jumbotron h2 {
+    font-size: 40px;
+}
+  
+.welcome-jumbotron h1 {
+    margin-bottom: 60px;
+}
+  
+.welcome-jumbotron p {
+    margin-bottom: 60px;
+    font-size: 30px;
+}
+
+.place-info-box {
+    color: #555;
+    display: block;
+    min-height: 120px;
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    margin-bottom: 15px;
+  }
+  .place-info-box small {
+    font-size: 14px;
+  }
+  .place-info-box .progress {
+    background: rgba(0, 0, 0, 0.2);
+    margin: 5px -10px 5px -10px;
+    height: 2px;
+  }
+  .place-info-box .progress,
+  .place-info-box .progress .progress-bar {
+    border-radius: 0;
+  }
+  .place-info .progress .progress-bar {
+    background: #fff;
+  }
+  .place-info-box-content {
+    padding: 5px 10px;
+    margin-left: 120px;
+  }
+  .place-info-box-detail {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+  
+  .place-info-box-text {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    width: 80%;
+    float: left
+  }
+  
+  .place-info-box-star {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 10px;
+    float: right;
+  }
+
+  .menu-item-info-box {
+    color: #555;
+    display: block;
+    min-height: 120px;
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    margin-bottom: 15px;
+  }
+  .menu-item-info-box small {
+    font-size: 14px;
+  }
+  .menu-item-info-box .progress {
+    background: rgba(0, 0, 0, 0.2);
+    margin: 5px -10px 5px -10px;
+    height: 2px;
+  }
+  .menu-item-info-box .progress,
+  .menu-item-info-box .progress .progress-bar {
+    border-radius: 0;
+  }
+  .menu-item-info .progress .progress-bar {
+    background: #fff;
+  }
+  .menu-item-info-box-icon {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 2px;
+    display: block;
+    float: left;
+    /*height: 120px;*/
+    width: 120px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2);
+  }
+  .menu-item-info-box-icon > img {
+    max-width: 100%;
+    /*border-right: 1px solid rgba(0, 0, 0, 0.1);*/
+  }
+
+  .menu-item-info-box-price {
+    font-weight: bold;
+    margin-right: 20px;
+    font-size: 20px;
+  }
+
+  .place-info-box-price {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .menu-item-info-box-content {
+    padding: 5px 10px;
+    margin-left: 120px;
+  }
+  
+  .menu-item-info-box-content a {
+    cursor: pointer;
+  }
+  
+  .menu-item-info-box-detail {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  .menu-item-info-box-text {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    width: 80%;
+  }
+  
+  .menu-item-info-box-more {
+    display: block;
+  }
+  
+  .place-info-box-more {
+    display: block;
+  }
+  .progress-description {
+    margin: 0;
+  }
+
+  .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: #c94714ec
+  }
+
+  .nav-pills .nav-link:not(:active):hover {
+    color: #c94714ec
+  }
+
+  .nav-pills .nav-link.nav-link.active:hover {
+    color: #ffffff80
+  }
+
+  .nav-pills .nav-link:active:hover {
+      color: black;
+  }
+
+  #btnAddItemMenu {
+    color: #c94714ec;
+    padding-top: 1px;
+  }
+
+  #btnAddItemMenu:hover {
+    cursor: pointer;
+    color: #555;
+  }

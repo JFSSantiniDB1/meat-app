@@ -1,0 +1,13 @@
+<section class="content">
+    <div class="col-12" style="padding-right: 0px; padding-left: 0px;">
+        <div class="row">
+            <div class="col-9">
+                <ma-menu-item *ngFor="let item of menu | async"[menuItem]="item"
+                (add)="addMenuItem($event)"></ma-menu-item>     
+            </div>
+            <div class="col-3" style="padding-right: 15px; padding-left: 0px;">
+                <ma-shopping-cart #shoppingCart></ma-shopping-cart> 
+            </div>
+        </div>
+    </div>
+</section>
