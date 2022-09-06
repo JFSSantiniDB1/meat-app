@@ -1,0 +1,8 @@
+<div *ngFor="let option of options">
+    <div class="form-check">
+        <label>
+            <input class="form-check-input" type="radio" (click)="setValue(option)" name="radioPayment">
+            {{option.label}}
+        </label>
+    </div>
+</div>

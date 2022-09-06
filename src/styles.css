@@ -201,3 +201,7 @@ body {
     cursor: pointer;
     color: #555;
   }
+
+  #btnRemoveItemCart {
+    color: #c94714ec
+  }
