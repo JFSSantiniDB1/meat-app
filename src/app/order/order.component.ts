@@ -16,7 +16,7 @@ export class OrderComponent implements OnInit {
 
   numberPattern = /^[0-9]*$/
 
-  orderForm: FormGroup | undefined
+  orderForm!: FormGroup;
 
   delivery: number = 8
 
@@ -81,7 +81,7 @@ export class OrderComponent implements OnInit {
       this.orderService.checkOrder(order)
         .subscribe( (orderId: string) => {
           console.log(`Compra concluída: ${orderId}`)
-          //this.router.navigate(['/order-summary'])
+          this.router.navigate(['/order-summary'])
           this.orderService.clear()
       })
 

@@ -5,8 +5,7 @@ import { RestaurantsService } from '../restaurants/restaurants.service';
 
 @Component({
   selector: 'ma-restaurant-detail',
-  templateUrl: './restaurant-detail.component.html',
-  styleUrls: ['./restaurant-detail.component.css']
+  templateUrl: './restaurant-detail.component.html'
 })
 export class RestaurantDetailComponent implements OnInit {
 

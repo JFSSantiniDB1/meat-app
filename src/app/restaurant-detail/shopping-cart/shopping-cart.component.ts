@@ -4,8 +4,7 @@ import { ShoppingCartService } from './shopping-cart.service';
 
 @Component({
   selector: 'ma-shopping-cart',
-  templateUrl: './shopping-cart.component.html',
-  styleUrls: ['./shopping-cart.component.css']
+  templateUrl: './shopping-cart.component.html'
 })
 export class ShoppingCartComponent implements OnInit {
 

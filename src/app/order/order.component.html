@@ -3,114 +3,113 @@
 
 <section class="content">
   <section class="invoice" style="padding: 20px;">
-        <form #form="ngForm" novalidate> <!-- [formGroup]="orderForm" novalidate -->
-          <div class="row">
-            <div class="col-md-12">
-              <h2 class="page-header">
-                <i class="fa fa-shopping-cart"></i> Finalize o seu pedido
-              </h2>
-            </div>
-          </div>
+    <form [formGroup]="orderForm" novalidate>
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="page-header">
+            <i class="fa fa-shopping-cart"></i> Finalize o seu pedido
+          </h2>
+        </div>
+      </div>
 
-          <div class="row">
-            <div class="col-md-12">
-              <p class="lead">Seus Dados:</p>
-            </div>
-            <div class="col-md-12">
-              <!-- <span class="help-block pull-right has-error-block" *ngIf="orderForm.hasError('emailsNotMatch')"><i class="fa fa-remove"></i> Email-s não conferem</span> -->
-            </div>
-
-            <div class="col-md-12">
-              <ma-input-container errorMessage="Campo obrigatório e com 5 caracteres" label="Nome">
-                <input name="name" ngModel required minlength="5" class="form-control" placeholder="Nome" autocomplete="off" > <!-- formControlName="name" -->
-              </ma-input-container>
-            </div>
-
-            <div class="col-sm-3 col-xs-6">
-              <ma-input-container errorMessage="E-mail inválido" label="E-mail">
-                <input name="email" ngModel required type="text" class="form-control" placeholder="E-mail" [pattern]="emailPattern" autocomplete="off"> <!--formControlName="email"-->
-              </ma-input-container>
-            </div>
-
-            <div class="col-sm-3 col-xs-6">
-              <ma-input-container errorMessage="E-mail inválido" label="E-mail">
-                <input name="emailConfirmation" ngModel required type="text" class="form-control" placeholder="Confirmação do e-mail" [pattern]="emailPattern" autocomplete="off"> <!--formControlName="emailConfirmation"-->
-              </ma-input-container>
-            </div>
-
-          </div>
-
-          <div class="row">
-            <div class="col-md-12">
-              <p class="lead">Endereço de Entrega:</p>
-            </div>
-            <div class="col-sm-6 col-xs-12">
-              <ma-input-container errorMessage="Campo obrigatório e com 5 caracteres" label="Endereço">
-                <input class="form-control" ngModel required minlength="5"  name="address" placeholder="Endereço" autocomplete="off" >
-              </ma-input-container>
-            </div>
-            <div class="col-sm-3 col-xs-6">
-              <ma-input-container errorMessage="Obrigatório e somente números" label="Número">
-                <input type="text" ngModel ngModel required class="form-control" name="number" placeholder="Número" [pattern]="numberPattern" autocomplete="off">
-              </ma-input-container>
-            </div>
-            <div class="col-sm-3 col-xs-6">
-              <ma-input-container>
-                <input type="text" ngModel class="form-control" name="optionalAddress" placeholder="Complemento">
-              </ma-input-container>
-
-            </div>
-            <!-- /.col -->
-          </div>
-          <!-- /.row -->
-
-          <!-- Table row -->
-          <div class="row">
-            <div class="col-md-12">
-              <p class="lead">Itens do Pedido:</p>
-            </div>
-
-            <div class="col-md-12">
-              <ma-order-items [items]="cartItems()"
-                  (increaseQty)="increaseQty($event)"
-                  (decreaseQty)="decreaseQty($event)"
-                  (remove)="remove($event)"></ma-order-items>
-            </div>
-            
-            <!-- /.col -->
-          </div>
-          <!-- /.row -->
-
-          <div class="row">
-            <!-- accepted payments column -->
-            <div class="col-sm-6 col-xs-12">
-              <p class="lead">Formas de Pagamento:</p>
-
-                <div class="form-group">
-                   <ma-radio [options]="paymentOptions" name="paymentOption" ngModel required></ma-radio>
-                </div>
-
-            </div>
-            <!-- /.col -->
-            <div class="col-sm-6 col-xs-12">
-              <p class="lead">Frete e Total:</p>
-
-              <ma-delivery-costs [delivery]="delivery" [itemsValue]="itemsValue()"></ma-delivery-costs>
-            </div>
-            <!-- /.col -->
-          </div>
-
-        </form>
-
-        <div class="row">
-          <div class="col-md-12">
-            <button (click)="checkOrder(form.value)"
-              class="btn btn-success pull-right"
-              [disabled]="!form?.valid || cartItems().length === 0">
-                <i class="fa fa-credit-card"></i> Concluir Pedido
-            </button>
-          </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p class="lead">Seus Dados:</p>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+        </div>
+        <div class="col-sm-3 col-xs-6">
+          <span class="help-block" style="color:red" *ngIf="orderForm.hasError('emailsNotMatch')"><i
+              class="fa fa-remove"></i> E-mails não conferem</span>
         </div>
 
-    </section>
+        <div class="col-sm-6 col-xs-12">
+          <ma-input-container errorMessage="Campo obrigatório e com 5 caracteres" label="Nome">
+            <input formControlName="name" class="form-control" placeholder="Nome" autocomplete="off">
+          </ma-input-container>
+        </div>
+
+        <div class="col-sm-3 col-xs-6">
+          <ma-input-container errorMessage="E-mail inválido" label="E-mail">
+            <input formControlName="email" type="text" class="form-control" placeholder="E-mail" autocomplete="off">
+          </ma-input-container>
+        </div>
+
+        <div class="col-sm-3 col-xs-6">
+          <ma-input-container errorMessage="E-mail inválido" label="E-mail">
+            <input formControlName="emailConfirmation" type="text" class="form-control"
+              placeholder="Confirmação do e-mail" autocomplete="off">
+          </ma-input-container>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <p class="lead">Endereço de Entrega:</p>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+          <ma-input-container errorMessage="Campo obrigatório e com 5 caracteres" label="Endereço">
+            <input class="form-control" formControlName="address" placeholder="Endereço" autocomplete="off">
+          </ma-input-container>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+          <ma-input-container errorMessage="Obrigatório e somente números" label="Número">
+            <input type="text" class="form-control" formControlName="number" placeholder="Número" autocomplete="off">
+          </ma-input-container>
+        </div>
+        <div class="col-sm-3 col-xs-6">
+          <ma-input-container>
+            <input type="text" class="form-control" formControlName="optionalAddress" placeholder="Complemento">
+          </ma-input-container>
+
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <p class="lead">Itens do Pedido:</p>
+        </div>
+
+        <div class="col-md-12">
+          <ma-order-items [items]="cartItems()" (increaseQty)="increaseQty($event)" (decreaseQty)="decreaseQty($event)"
+            (remove)="remove($event)"></ma-order-items>
+        </div>
+
+
+      </div>
+
+
+      <div class="row">
+
+        <div class="col-sm-6 col-xs-12">
+          <p class="lead">Formas de Pagamento:</p>
+
+          <div class="form-group">
+            <ma-radio [options]="paymentOptions" formControlName="paymentOption"></ma-radio>
+          </div>
+
+        </div>
+
+        <div class="col-sm-6 col-xs-12">
+          <p class="lead">Frete e Total:</p>
+
+          <ma-delivery-costs [delivery]="delivery" [itemsValue]="itemsValue()"></ma-delivery-costs>
+        </div>
+
+      </div>
+
+    </form>
+
+    <div class="row">
+      <div class="col-md-12">
+        <button (click)="checkOrder(orderForm.value)" class="btn btn-success pull-right"
+          [disabled]="!orderForm.valid || cartItems().length === 0">
+          <i class="fa fa-credit-card"></i> Concluir Pedido
+        </button>
+      </div>
+    </div>
+
+  </section>
 </section>
