@@ -16,6 +16,7 @@ import { MenuItemComponent } from './restaurant-detail/menu-item/menu-item.compo
 import { ReviewsComponent } from './restaurant-detail/reviews/reviews.component';
 import { OrderSummaryComponent } from './order-summary/order-summary.component';
 import { SharedModule } from './shared/shared.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 
 @NgModule({
@@ -33,9 +34,10 @@ import { SharedModule } from './shared/shared.module';
     OrderSummaryComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     HttpClientModule,
-    FormsModule,
+    BrowserAnimationsModule,
     SharedModule.forRoot(),
     RouterModule.forRoot(routes, {preloadingStrategy: PreloadAllModules}),
   ],
