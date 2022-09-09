@@ -205,3 +205,17 @@ body {
   .nav-pills .nav-link:active:hover {
       color: black;
   }
+
+  .search-link {
+    cursor: pointer;
+    color: #555
+  }
+
+  .search-link:hover {
+    color: #c94714ec
+  }
+
+  .search-bar {
+    opacity: 0;
+    max-height: 0px;
+  }
