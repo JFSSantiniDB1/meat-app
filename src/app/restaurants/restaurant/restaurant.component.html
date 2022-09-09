@@ -1,6 +1,6 @@
 <a [routerLink]="['/restaurants', restaurant?.id]">
     <div class="align-items-stretch flex-column" style="margin: 8px">
-        <div class="card-header text-muted border-bottom-0 card text-muted border-bottom-0" style="padding-left: 10px; padding-right: 20px;">        
+        <div class="card-header text-muted border-bottom-0 card text-muted border-bottom-0" [@restaurantAppeared]="restaurantState" style="padding-left: 10px; padding-right: 20px;">        
             <div class="card-body pt-0" style="padding:0px;">
                 <div class="row">
                     <div class="col-3 text-center" style="padding-right: 0px;">

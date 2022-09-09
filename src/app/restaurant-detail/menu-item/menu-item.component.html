@@ -1,7 +1,7 @@
 <section class="content">
     <div class="col-12" style="padding: 0px; margin: 0px;">
         <div class="align-items-stretch flex-column" style="margin-bottom: 15px">
-            <div class="card-header text-muted card text-muted border-bottom-0"
+            <div class="card-header text-muted card text-muted border-bottom-0" [@menuItemAppeared]="menuItemState"
                 style="padding-left: 5px; padding-right: 20px; background-color: white;">
                 <div class="card-body pt-0" style="padding:0px;">
                     <div class="row">
@@ -18,8 +18,8 @@
                                     <span class="place-info-box-price">{{menuItem?.price | currency: 'BRL':
                                         true}}</span>
                                 </div>
-                                <div class="col-6" id="btnAddItemMenu">
-                                    <a (click)="emitAddEvent()" class=""><i class="fa fa-plus-circle"></i> Adicionar</a>
+                                <div class="col-6">
+                                    <a (click)="emitAddEvent()" class="btnAddItemMenu"><i class="fa fa-plus-circle"></i> Adicionar</a>
                                 </div>
                             </div>
                         </div>

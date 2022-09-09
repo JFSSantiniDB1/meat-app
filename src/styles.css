@@ -2,6 +2,20 @@ body {
     color: #555;
 }
 
+.btnAddItemMenu {
+  color: #c94714ec;
+  padding-top: 1px;
+}
+
+.btnAddItemMenu:hover {
+  cursor: pointer;
+  color: #555;
+}
+
+#btnRemoveItemCart {
+  color: #c94714ec
+}
+
 #verRestaurantes{
   background-color: #c94714ec;
   border-color: rgb(156, 147, 147);
@@ -190,18 +204,4 @@ body {
 
   .nav-pills .nav-link:active:hover {
       color: black;
-  }
-
-  #btnAddItemMenu {
-    color: #c94714ec;
-    padding-top: 1px;
-  }
-
-  #btnAddItemMenu:hover {
-    cursor: pointer;
-    color: #555;
-  }
-
-  #btnRemoveItemCart {
-    color: #c94714ec
   }

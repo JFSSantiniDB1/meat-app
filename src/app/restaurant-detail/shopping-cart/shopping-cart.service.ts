@@ -16,7 +16,7 @@ export class ShoppingCartService {
         } else{
             this.items?.push(new CartItem(item))
         }
-        this.notificationService.notify(`Item ${item.name} adicionado com sucesso!`)
+        this.notificationService.notify(`${item.name} adicionado com sucesso!`)
     }
 
     increaseQty(item: CartItem){
@@ -31,7 +31,7 @@ export class ShoppingCartService {
 
     removeItem(item: CartItem){
         this.items?.splice(this.items.indexOf(item),1)
-        this.notificationService.notify(`Item ${item.menuItem.name} removido com sucesso!`)
+        this.notificationService.notify(`${item.menuItem.name} removido com sucesso!`)
     }
 
     clear(){
