@@ -20,7 +20,7 @@
 
       <section class="content">
         <div class="row">
-                <div *ngFor="let restaurant of restaurants" class="col-sm-6 col-xs-12">
+                <div *ngFor="let restaurant of filteredRestaurants()" class="col-sm-6 col-xs-12">
                     <ma-restaurant [restaurant]="restaurant"></ma-restaurant>
                 </div>
                 <div *ngIf="restaurants?.length === 0" class="col-xs-12">

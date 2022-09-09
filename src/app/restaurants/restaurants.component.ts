@@ -56,6 +56,11 @@ export class RestaurantsComponent implements OnInit {
       .subscribe(restaurants => this.restaurants = restaurants);
   }
 
+  filteredRestaurants(){
+    return this.restaurants
+    // .filter(x => x.name.includes('Ice'))
+  }
+
   toggleSearch(){
     this.searchBarState = this.searchBarState === 'hidden' ? 'visible' : 'hidden'
   }
