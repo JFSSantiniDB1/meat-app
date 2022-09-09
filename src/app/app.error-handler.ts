@@ -1,5 +1,5 @@
 import { HttpErrorResponse } from "@angular/common/http"
-import { Observable, throwError } from "rxjs"
+import { throwError } from "rxjs"
 
 export class ErrorHandler {
     static handleError(error: Response | any) {
@@ -9,7 +9,6 @@ export class ErrorHandler {
         } else{
             errorMessage = error.message
         }
-
         return throwError(() => errorMessage)
     }
 }
