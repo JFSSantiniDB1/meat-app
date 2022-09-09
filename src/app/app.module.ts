@@ -18,7 +18,7 @@ import { OrderSummaryComponent } from './order-summary/order-summary.component'
 import { SharedModule } from './shared/shared.module'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { NotFoundComponent } from './not-found/not-found.component'
-import { LocationStrategy, HashLocationStrategy } from '@angular/common'
+//import { LocationStrategy, HashLocationStrategy } from '@angular/common'
 
 
 @NgModule({
@@ -44,7 +44,7 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common'
     SharedModule.forRoot(),
     RouterModule.forRoot(routes, {preloadingStrategy: PreloadAllModules}),
   ],
-  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
+  //providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
