@@ -3,11 +3,12 @@ exports.__esModule = true;
 exports.handleAuthentication = void 0;
 var users_1 = require("./users");
 var jwt = require("jsonwebtoken");
+var apiConfig = require('./api-config');
 var handleAuthentication = function (req, resp) {
     var user = req.body;
     if (isValid(user)) {
         var dbUser = users_1.users[user.email];
-        var token = jwt.sign({ sub: dbUser.email, iss: 'meap-app' }, 'meat-app-password');
+        var token = jwt.sign({ sub: dbUser.email, iss: 'meap-app' }, apiConfig.secret);
         resp.json({ name: dbUser.name, email: dbUser.email, accessToken: token });
     }
     else {
