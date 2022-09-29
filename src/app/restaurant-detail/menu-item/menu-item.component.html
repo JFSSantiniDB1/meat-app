@@ -15,8 +15,7 @@
                             <span class="place-info-box-detail">{{menuItem?.description}}</span>
                             <div class="row" style="padding-top: 15px;">
                                 <div class="col-4">
-                                    <span class="place-info-box-price">{{menuItem?.price | currency: 'BRL':
-                                        true}}</span>
+                                    <span class="place-info-box-price">{{menuItem?.price | currency: 'BRL': 'symbol'}}</span>
                                 </div>
                                 <div class="col-6">
                                     <a (click)="emitAddEvent()" class="btnAddItemMenu"><i class="fa fa-plus-circle"></i> Adicionar</a>

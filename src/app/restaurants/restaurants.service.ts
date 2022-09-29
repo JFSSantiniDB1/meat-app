@@ -3,8 +3,6 @@ import { HttpClient, HttpParams } from '@angular/common/http'
 import { Restaurant } from "./restaurant/restaurant.model";
 import { MEAT_API } from "../app.api";
 import { Observable } from "rxjs/internal/Observable";
-import { catchError } from 'rxjs/operators';
-import { ErrorHandler } from '../app.error-handler'
 import { MenuItem } from "../restaurant-detail/menu-item/menu-item.model";
 
 @Injectable()

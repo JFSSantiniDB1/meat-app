@@ -13,4 +13,5 @@ export const users : {[key: string]: User} =
 {
     "juliana@gmail.com": new User('juliana@gmail.com', 'Juliana', 'juliana123'),
     "amanda@gmail.com": new User('amanda@gmail.com', 'Amanda', 'amanda123'),
+    "jean.santini@db1.com.br": new User('jean.santini@db1.com.br', 'JeanSantini', 'Jfs@1992')
 }

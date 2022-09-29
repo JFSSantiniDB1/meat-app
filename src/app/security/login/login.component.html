@@ -1,0 +1,32 @@
+<section class="content-header">
+</section>
+
+<section class="content">
+    <div class="jumbotron welcome-jumbotron">
+        <div class="login-logo">
+            <b>MEAT</b> | Login
+        </div>
+        <div class="col-md-12 col-md-offset-3 col-md-6 login-box-body">
+            <p class="login-box-msg">Por favor, efetue o login para continuar</p>
+    
+            <form [formGroup]="loginForm" style="padding-left:250px;padding-right:250px;">
+                <ma-input-container [showTip]="false">
+                    <input type="text" formControlName="email" class="form-control" placeholder="Email">
+                    <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                </ma-input-container>
+                <ma-input-container [showTip]="false">
+                    <input type="password" formControlName="password" class="form-control" placeholder="Password">
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                </ma-input-container>
+                <div class="row">
+                    <!-- /.col -->
+                    <div class="col-md-offset-8 col-md-4" style="margin-left: auto;">
+                        <button type="submit" (click)="login()" [disabled]="loginForm.invalid" class="btn btn-primary btn-block btn-flat btn-lg" id="verRestaurantes">Entrar</button>
+                    </div>
+                    <!-- /.col -->
+                </div>
+            </form>
+        </div>
+    </div>
+    
+</section>

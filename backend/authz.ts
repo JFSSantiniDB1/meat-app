@@ -1,6 +1,6 @@
 import { Request, Response } from "express"
 import * as jwt from 'jsonwebtoken'
-const apiConfig = require('./api-config')
+import { apiConfig } from './api-config'
 
 export const handleAuthorization = (req: Request, resp: Response, next) => {
     const token = extractToken(req)
@@ -13,7 +13,7 @@ export const handleAuthorization = (req: Request, resp: Response, next) => {
                 next()
             }
             else{
-                resp.status(403).json({message: 'Não autorizado.'})
+                resp.status(403).json({message: 'Não autorizado.', error: error})
             }
         })
     }

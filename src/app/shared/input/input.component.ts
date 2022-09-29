@@ -9,6 +9,7 @@ export class InputComponent implements OnInit, AfterContentInit {
 
   @Input() label: string | undefined
   @Input() errorMessage: string | undefined
+  @Input() showTip: boolean = true
 
   input: any
 

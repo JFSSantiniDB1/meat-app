@@ -1,7 +1,8 @@
 const jsonServer = require('json-server')
 
 import * as fs from 'fs'
-import * as https from 'https'
+import * as http from 'http'
+
 import { handleAuthentication } from './auth'
 import { handleAuthorization } from './authz'
 
@@ -28,6 +29,6 @@ const options = {
   key: fs.readFileSync('./backend/keys/key.pem')
 }
 
-https.createServer(options, server).listen(3000, () => {
+http.createServer(server).listen(3001, () => {
   console.log('JSON Server is running')
 })

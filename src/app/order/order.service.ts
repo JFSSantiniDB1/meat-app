@@ -1,7 +1,6 @@
-import { HttpClient, HttpHeaders } from "@angular/common/http"
+import { HttpClient } from "@angular/common/http"
 import { MEAT_API } from "../app.api";
-import { ErrorHandler } from '../app.error-handler'
-import { catchError, map, Observable } from "rxjs"
+import { map, Observable } from "rxjs"
 import { CartItem } from "../restaurant-detail/shopping-cart/cart-item.model"
 import { ShoppingCartService } from "../restaurant-detail/shopping-cart/shopping-cart.service"
 import { Injectable } from "@angular/core";

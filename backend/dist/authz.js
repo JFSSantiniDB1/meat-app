@@ -2,7 +2,7 @@
 exports.__esModule = true;
 exports.handleAuthorization = void 0;
 var jwt = require("jsonwebtoken");
-var apiConfig = require('./api-config');
+var api_config_1 = require("./api-config");
 var handleAuthorization = function (req, resp, next) {
     var token = extractToken(req);
     if (!token) {
@@ -10,12 +10,12 @@ var handleAuthorization = function (req, resp, next) {
         resp.status(401).json({ message: 'Você precisa se autenticar.' });
     }
     else {
-        jwt.verify(token, apiConfig.secret, function (error, decoded) {
+        jwt.verify(token, api_config_1.apiConfig.secret, function (error, decoded) {
             if (decoded) {
                 next();
             }
             else {
-                resp.status(403).json({ message: 'Não autorizado.' });
+                resp.status(403).json({ message: 'Não autorizado.', error: error });
             }
         });
     }
