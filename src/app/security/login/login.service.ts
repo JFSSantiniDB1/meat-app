@@ -34,6 +34,8 @@ export class LoginService{
 
     logout(){
         this.user = undefined;
+        if(this.lastUrl === '/order')
+            this.handleLogin();
     }
 
     handleLogin(path: string = this.lastUrl) {
